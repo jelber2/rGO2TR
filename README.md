@@ -3,11 +3,8 @@
 ### About
 
     The rGO2TR package is based off of the GO2TR: Gene Ontology to Target Region workflow
-
     and includes functions for manipulating gene annotations, acquiring mRNA accession
-
     identifiers, uploading data to an annoation service, creating a gene ontology list,
-
     and filtering gene annotations by gene ontology.
 
 
@@ -17,11 +14,8 @@
 #### To install rGO2TR package from within R, make sure you have the following packages:
 
     devtools (from CRAN)
-
     genomes (from Bioconductor)
-
     GOstats (from Bioconductor)
-
     rvest (from CRAN)
 
 
@@ -29,7 +23,6 @@
 ##### To install devtools and rvest:
 
     install.packages("devtools")
-
     install.packages("rvest")
 
 
@@ -37,9 +30,7 @@
 ##### To install Bioconductor packages:
 
     source("http://bioconductor.org/biocLite.R")
-
     biocLite("genomes")
-
     biocLite("GOstats")
 
 
@@ -55,11 +46,8 @@
 ##### From within R, load the required libraries
 
     library("rvest")
-
     library("GOstats")
-
     library("genomes")
-
     library("rGO2TR")
 
 
@@ -102,19 +90,13 @@
 ###### 5. Translate the mRNA using get.mRNA.translated function
 
     mRNA1.translated <- get.mRNA.translated(mRNA1.acc,
-
                                             mRNA1.translated,
-
                                             "jelber2@lsu.edu",
-
                                             "sparrow.mRNA1.fasta")
 
     mRNA2.translated <- get.mRNA.translated(mRNA2.acc,
-
                                             mRNA2.translated,
-
                                             "jelber2@lsu.edu",
-
                                             "sparrow.mRNA2.fasta")
 
 
@@ -168,43 +150,29 @@
 ###### 6b. Read in the sliminput.txt files into R using the following commands:
 
     goannaoutput1 <- read.table("sparrow_set1.sliminput.txt")
-
     goannaoutput2 <- read.table("sparrow_set2.sliminput.txt")
-
     goannaoutput <- rbind(goannaoutput1, goannaoutput2)
-
     write.table(goannaoutput,
-
                 file = "sparrow_annot.sliminput.txt",
-
                 append = FALSE,
-
                 quote = FALSE,
-
                 sep = "\t",
-
                 eol = "\n",
-
                 row.names = FALSE,
-
                 col.names = FALSE)
 
 
 ###### 7. Make GO id list for desired gene ontology term
 
     # example using GO term for pigment = GO:0043473
-
     GO.term <- "GO:0043473" # sets GO term as pigment
-
     GO.term.descendants <- GOBPOFFSPRING$"GO:0043473" # gets descendants for pigment
-
     GO.id.list <- c(GO.term, GO.term.descendants) # makes GO id list
 
 
 ###### 8. Make mRNA-GO id list with make.mRNA.GO.list function
 
     mRNA.GO.list <- make.mRNA.GO.list("sparrow_annot.sliminput.txt",
-
                                       "sparrow.mRNA.GO.list.txt")
 
 
