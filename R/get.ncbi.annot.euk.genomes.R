@@ -3,7 +3,7 @@
 #' @return Returns all eukaryotic genomes annotated by the NCBI Eukaryotic
 #' Genome Annotation Pipeline.
 #' @examples
-#' euks.filtered <- getNcbiAnnotEukGenomes()
+#' euks.filtered <- get.ncbi.annot.euk.genomes()
 get.ncbi.annot.euk.genomes <- function() {
   # parse the webpage
   theurl <- "http://www.ncbi.nlm.nih.gov/genome/annotation_euk/all/"

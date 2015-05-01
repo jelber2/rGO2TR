@@ -5,11 +5,11 @@
 #' @param file.name.to.upload Name of file to upload
 #' @param local.file.path Path of \code{file.name.to.upload}
 #' @examples
-#' uploadDataToiPlant ("jelber2",
+#' upload.data.iplant("jelber2",
 #'                    "Gopherus2011",
 #'                    "sparrow.mRNA1.fasta",
 #'                    "C:/Users/jelber2/Dropbox/LSU/Dissertation/Manuscripts/GO2OME/rGO2TR/white_throated_sparrow/")
-#' uploadDataToiPlant ("jelber2",
+#' upload.data.iplant("jelber2",
 #'                    "Gopherus2011",
 #'                    "sparrow.mRNA2.fasta",
 #'                    "C:/Users/jelber2/Dropbox/LSU/Dissertation/Manuscripts/GO2OME/rGO2TR/white_throated_sparrow/")
