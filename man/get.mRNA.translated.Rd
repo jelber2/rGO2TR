@@ -23,11 +23,11 @@ An R object containing mRNA translated sequences
 Get translated sequences in FASTA format from mRNA accession identifier input.
 }
 \examples{
-mRNA1.translated <- getmRNAtranslated(mRNA1.acc,
+mRNA1.translated <- get.mRNA.translated(mRNA1.acc,
                                       mRNA1.translated,
                                      "jelber2@lsu.edu",
                                      "sparrow.mRNA1.fasta")
-mRNA2.translated <- getmRNAtranslated(mRNA2.acc,
+mRNA2.translated <- get.mRNA.translated(mRNA2.acc,
                                       mRNA2.translated,
                                      "jelber2@lsu.edu",
                                      "sparrow.mRNA2.fasta")

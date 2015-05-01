@@ -9,13 +9,15 @@
 The rGO2TR package is based off of the GO2TR:
 \strong{G}ene \strong{O}ntology \strong{to} \strong{T}arget \strong{R}egion
 workflow and includes functions for manipulating gene annotations,
-acquiring mRNA accession identifiers, uploading data to an annoation service,
-creating a gene ontology list, and filtering gene annotations by
-gene ontology.
+acquiring mRNA accession identifiers, creating a gene ontology list,
+and filtering gene annotations by gene ontology.
 }
 \section{rGO2TR functions}{
 
 Note: All functions are listed in chronological order.
+
+Also see the [README](https://github.com/jelber2/rGO2TR/blob/master/README.md)
+for full program details.
 
 The gene annotation functions include:
 \code{\link{get.ncbi.annot.euk.genomes}} - gets all available genomes
@@ -30,9 +32,6 @@ gene annotations by desired source (i.e., CDS, mRNA, exon, etc.),
 predicted mRNA accessions identifiers (i.e., "XM_"), and
 \code{\link{get.mRNA.translated}} - returns the protein translated
 sequences for the mRNA in FASTA format.
-
-The upload data function, \code{\link{upload.data.iplant}} uploads FASTA
-files to the iPlant Discovery Enivronment by using their Agave API.
 
 The gene ontology list functions are \strong{not} coded as package
 functions, rather they are simple commands such as the following example,
