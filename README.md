@@ -65,10 +65,13 @@
     query.results <- search.annot.euks("Zonotrichia albicollis")
 
 
-###### 3. Download desired gff3 gene annotation file with get.gff3 function
+###### 3a. Download desired gff3 gene annotation file with get.gff3 function
 
     gff3 <- get.gff3(query.results, "sparrow.genome.gff3.gz")
 
+###### 3b. Filter gene annotations by desired source (i.e., CDS, mRNA, exon, etc.)
+
+    gff3.filtered <- filter.gff3(gff3, 'exon')
 
 ###### 4a. Get mRNA accession ids from gene annotations with get.mRNA.acc function
 
