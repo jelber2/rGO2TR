@@ -37,7 +37,7 @@
 
 ##### Then use the following command to actually install rGO2TR package
 
-    devtools::install_github("jelber2/rGO2TR", auth_token = "8d5c8580c1dfe4aff9e99d271eebece7e53c6fc4")
+    devtools::install_github("jelber2/rGO2TR")
 
 
 
@@ -65,10 +65,13 @@
     query.results <- search.annot.euks("Zonotrichia albicollis")
 
 
-###### 3. Download desired gff3 gene annotation file with get.gff3 function
+###### 3a. Download desired gff3 gene annotation file with get.gff3 function
 
     gff3 <- get.gff3(query.results, "sparrow.genome.gff3.gz")
 
+###### 3b. Filter gene annotations by desired source (i.e., CDS, mRNA, exon, etc.)
+
+    gff3.filtered <- filter.gff3(gff3, 'exon')
 
 ###### 4a. Get mRNA accession ids from gene annotations with get.mRNA.acc function
 
@@ -196,3 +199,28 @@
     cat("The target region after removing overlaps is",
     sum(width(final.target.region)),
     "bp.")
+    
+###### 13. Convert final target region to a BED file
+
+    final.target.region.bed <- data.frame(seqnames=seqnames(final.target.region),
+                                      starts=start(final.target.region)-1,
+                                      ends=end(final.target.region),
+                                      names=c(rep(".", length(final.target.region))),
+                                      scores=c(rep(".", length(final.target.region))),
+                                      strands=strand(final.target.region))
+
+###### 14. Write the final.target.region.bed to a file
+
+    write.table(final.target.region.bed,
+            file = "C_picta.target_region.bed",
+            append = FALSE,
+            quote = FALSE,
+            sep = "\t",
+            eol = "\n",
+            row.names = FALSE,
+            col.names = FALSE)
+
+or use this function
+
+    save.target.region.as.bed.file <- function (final.target.region,
+                                            output.file.name)
