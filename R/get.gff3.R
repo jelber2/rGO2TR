@@ -15,7 +15,7 @@ get.gff3 <- function(query.results, output.file.name) {
   
   # looks at files in GFF for query species
   ftp.search.list <- genomes::ftpList(ftp = ftp.search.path, fileonly = TRUE)
-  ftp.search.num <- grep("_top_level.gff3.gz", ftp.search.list)
+  ftp.search.num <- grep("_top_level.gff3.gz", ftp.search.list$name)
   ftp.desired.path <- ftp.search.list$name[ftp.search.num]
   
   # creates the path to download the GFF3 file from queried species
