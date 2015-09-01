@@ -219,3 +219,8 @@
             eol = "\n",
             row.names = FALSE,
             col.names = FALSE)
+
+or use this function
+
+    save.target.region.as.bed.file <- function (final.target.region,
+                                            output.file.name)
