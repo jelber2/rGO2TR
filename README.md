@@ -199,3 +199,23 @@
     cat("The target region after removing overlaps is",
     sum(width(final.target.region)),
     "bp.")
+    
+###### 13. Convert final target region to a BED file
+
+    final.target.region.bed <- data.frame(seqnames=seqnames(final.target.region),
+                                      starts=start(final.target.region)-1,
+                                      ends=end(final.target.region),
+                                      names=c(rep(".", length(final.target.region))),
+                                      scores=c(rep(".", length(final.target.region))),
+                                      strands=strand(final.target.region))
+
+###### 14. Write the final.target.region.bed to a file
+
+    write.table(final.target.region.bed,
+            file = "C_picta.target_region.bed",
+            append = FALSE,
+            quote = FALSE,
+            sep = "\t",
+            eol = "\n",
+            row.names = FALSE,
+            col.names = FALSE)
