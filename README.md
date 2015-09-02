@@ -131,9 +131,9 @@
 
         Nbr. Target Seqs	3
 
-        Pct Id. Filter	10
+        Pct Id. Filter	70
 
-        Query Coverage Fil	10
+        Query Coverage Fil	70
 
         Blast results format selection	TSV format
 
