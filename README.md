@@ -57,7 +57,7 @@
 
 ###### 1. Get available genomes with the get.ncbi.annot.euk.genomes function
 
-    euks.filtered <- get.ncbi.annot.euk.genomes
+    euks.filtered <- get.ncbi.annot.euk.genomes()
 
 
 ###### 2. Search for your desired genome with search.annot.euks function
