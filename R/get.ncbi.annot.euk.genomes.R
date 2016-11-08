@@ -6,36 +6,11 @@
 #' euks.filtered <- get.ncbi.annot.euk.genomes()
 get.ncbi.annot.euk.genomes <- function() {
   # parse the webpage
-  theurl <- "http://www.ncbi.nlm.nih.gov/genome/annotation_euk/all/"
-  webpage <- rvest::html(theurl)
-
-  # grabs the name for the first table called "Featured"
-  nn <- sub("(.+) \\(\\d+\\)",
-            "\\1",
-            XML::xpathSApply(webpage,
-                        '//*[@class="jig-ncbitoggler-open ui-ncbitoggler-
-                        group-mygroup1"]',
-                        xmlValue),
-            perl=TRUE)
-  # grabs the rest of the table names
-  nn <- c(nn, sub("(.+) \\(\\d+\\)",
-                  "\\1",
-                  XML::xpathSApply(webpage,
-                              '//*[@class="jig-ncbitoggler ui-ncbitoggler-
-                              group-mygroup1"]',
-                              xmlValue),
-                  perl=TRUE))
+  theurl <- "https://www.ncbi.nlm.nih.gov/genome/annotation_euk/all/"
+  webpage <- xml2::read_html(theurl)
   
   # converts tables in html into list of data.frames
   tables <- rvest::html_table(x=webpage)
-  
-  # applies table names to each table
-  names(tables) = nn
-  
-  # adds the group name to each table
-  tables <- lapply(seq(length(tables)), function(i) {
-    cbind(tables[[i]], Group = names(tables)[i])
-  })
   
   # combines all tables into one table
   tables2 <- do.call(rbind, tables)
@@ -44,7 +19,8 @@ get.ncbi.annot.euk.genomes <- function() {
   tables2[6:9] <- list(NULL)
   
   # grabs the desired ftp links
-  web.links <- XML::getHTMLLinks(webpage)
+  xmlwebpage <- XML::htmlParse(webpage)
+  web.links <- XML::getHTMLLinks(xmlwebpage)
   
   # gets rid of ftp link at end of page
   web.links <- web.links[web.links != "ftp://ftp.ncbi.nlm.nih.gov/"]
