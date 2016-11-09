@@ -14,9 +14,9 @@ get.ncbi.annot.euk.genomes <- function() {
   
   # combines all tables into one table
   tables2 <- do.call(rbind, tables)
-  
-  # gets rid of columns 7-9 (they aren't needed)
-  tables2[6:9] <- list(NULL)
+
+  # gets rid of columns 7-10 (they aren't needed)
+  tables2[6:10] <- list(NULL)
   
   # grabs the desired ftp links
   xmlwebpage <- XML::htmlParse(webpage)
@@ -31,7 +31,7 @@ get.ncbi.annot.euk.genomes <- function() {
   # links from factor to character
   tables3 <- cbind (tables2, ftp.links)
   euks.filtered <- tables3
-  euks.filtered$Links <- as.character(euks.filtered$Links)
   euks.filtered <- unique(euks.filtered)
+  euks.filtered$Links <- as.character(euks.filtered$Links)
   return(euks.filtered)
 }
