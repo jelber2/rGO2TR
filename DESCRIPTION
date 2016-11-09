@@ -11,5 +11,5 @@ License: GPL-2
 Imports: GenomicRanges (>= 1.26.1), 
     XML (>= 3.98-1.4),
     GOstats (>= 2.40.0),
-    GO.db (>= 3.4.0)
+    GO.db (>= 3.4.0),
     rvest (>= 0.3.2)
