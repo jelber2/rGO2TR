@@ -24,6 +24,7 @@
 
     install.packages("devtools")
     install.packages("rvest")
+    install.packages("XML")
 
 
 
@@ -48,6 +49,7 @@
     library("rvest")
     library("GOstats")
     library("GenomicRanges")
+    library("XML")
     library("rGO2TR")
 
 
