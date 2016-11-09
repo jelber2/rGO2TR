@@ -1,5 +1,6 @@
 #' Retrieve Entrez database records at NCBI in a variety of formats
-#' modified from genomes::efetch by Chris Stubben
+#' code from Chris Stubben's genomes2 package modified by Jean Elbers
+#' https://github.com/cstubben/genomes2/blob/master/R/efetch.R 
 #' @param id An EntrezHistory object or vector of Ids
 #' @param db An Entrez database, default pubmed
 #' @param rettype Retrieval type, see note for details

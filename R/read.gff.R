@@ -1,5 +1,6 @@
 read.gff <- function(file,  locus.tags=TRUE, nrows = -1  ){
-  # from Chris Stubben modified by Jean Elbers
+  # code from Chris Stubben's genomes2 package modified by Jean Elbers
+  # https://github.com/cstubben/genomes2/blob/master/R/read.gff.R
   # columns 1 and 2 are saved in metadata (full seqid with version# and source )
   #  columns 4 = start , 5 = end and 7 = strand are saved in GRange
   
