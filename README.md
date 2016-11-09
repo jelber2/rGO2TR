@@ -14,7 +14,7 @@
 #### To install rGO2TR package from within R, make sure you have the following packages:
 
     devtools (from CRAN)
-    genomes (from Bioconductor)
+    GenomicRanges (from Bioconductor)
     GOstats (from Bioconductor)
     rvest (from CRAN)
 
@@ -30,7 +30,7 @@
 ##### To install Bioconductor packages:
 
     source("http://bioconductor.org/biocLite.R")
-    biocLite("genomes")
+    biocLite("GenomicRanges")
     biocLite("GOstats")
 
 
@@ -47,7 +47,7 @@
 
     library("rvest")
     library("GOstats")
-    library("genomes")
+    library("GenomicRanges")
     library("rGO2TR")
 
 
