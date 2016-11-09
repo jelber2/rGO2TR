@@ -31,7 +31,7 @@ get.mRNA.translated <- function(input.R.object,
   {
     # for each column of 200 accessions, fetch the fasta sequence using the
     # genomes::efetch function
-    split.xml <- strsplit(efetch2(id = mRNA1.acc, "nucleotide", "gb", "xml"), "\n")
+    split.xml <- strsplit(efetch2(id = input.R.object.split[[i]], "nucleotide", "gb", "xml"), "\n")
     output.R.object <- c(output.R.object, split.xml[[1]])
     output.R.object <- output.R.object[grepl('[A-Z]{13,}|accession-version|>XM_\\w+.\\d translated',
                                              output.R.object,
