@@ -1,12 +1,14 @@
 Package: rGO2TR
 Type: Package
 Title: Filters NCBI Annotated Eukaryotic Genomes by Gene Ontology.
-Version: 1.0.2
+Version: 1.0.3
 Date: 2016-11-08
 Authors@R: person("Jean", "Elbers", email = "jean.elbers@gmail.com", role = c("aut", "cre"))
 Description: An R implementation of GO2TR: a gene ontology-based workflow to
     generate target regions for target enrichment experiments using genomes 
     annotated by the NCBI Eukaryotic Genome Annotation Pipeline.
 License: GPL-2
-Imports: GOstats (>= 2.32.0),
-    rvest (>= 0.2.0)
+Imports: GenomicRanges (>= 1.26.1), 
+    XML (>= 3.98-1.4),
+    GOstats (>= 2.40.0),
+    rvest (>= 0.3.2)
