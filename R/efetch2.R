@@ -39,7 +39,7 @@ efetch2 <- function (id, db = "pubmed", rettype = "", retmode = "text",
     print(fetch)
   if (missing(destfile)) {
     content <- getURL(fetch)
-    gp <- htmlParse(content, asText = TRUE)
+    gp <- XML::htmlParse(content, asText = TRUE)
     #gp <- readLines(fetch)
     gp
   }
