@@ -1,5 +1,6 @@
 ftpList<-function(ftp, fileonly = FALSE)
-  # code from Chris Stubben modified by Jean Elbers
+  # code from Chris Stubben's genomes2 package modified by Jean Elbers
+  # https://github.com/cstubben/genomes2/blob/master/R/ftpList.R
 {
   # ftp starts with ftp://
   if(!grepl("^ftp://", ftp)){ftp <- paste("ftp://", ftp, sep="")}
