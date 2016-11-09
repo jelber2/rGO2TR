@@ -16,6 +16,7 @@
     devtools (from CRAN)
     GenomicRanges (from Bioconductor)
     GOstats (from Bioconductor)
+    GO.db (from Bioconductor)
     rvest (from CRAN)
 
 
@@ -33,6 +34,7 @@
     source("http://bioconductor.org/biocLite.R")
     biocLite("GenomicRanges")
     biocLite("GOstats")
+    biocLite("GO.db")
 
 
 
@@ -50,6 +52,7 @@
     library("GOstats")
     library("GenomicRanges")
     library("XML")
+    library("GO.db")
     library("rGO2TR")
 
 
