@@ -16,7 +16,7 @@ read.gff <- function(file,  locus.tags=TRUE, nrows = -1  ){
   }
   
   # SAVE OR remove version number?   - note strsplit2 in limma
-  # seqid  <- unique(x$seqid)
+    seqid  <- unique(x$seqid)
   # if( all(grepl("\\.[0-9]$", seqid )) )  x$seqid<- strsplit2(x$seqid, ".", fixed=TRUE)
   
   
