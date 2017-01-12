@@ -8,8 +8,14 @@
 create.target.region <- function (retained.mRNA.list, gff3.filtered) {
   j=0
   target.region <- ""
+
+  gff3.filtered$tags <- sub(".+Genbank:(XM_\\d+\\.\\d).+",
+                            "\\1",
+                            gff3.filtered$tags,
+                            perl=TRUE)
+
   target.region <- gff3.filtered[0]
-  
+
   for (i in retained.mRNA.list)
   {
     j = j+1
