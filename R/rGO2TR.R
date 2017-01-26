@@ -22,9 +22,10 @@
 #' The mRNA accession functions include: \code{\link{filter.gff3}} - filters 
 #' gene annotations by desired source (i.e., CDS, mRNA, exon, etc.),
 #' \code{\link{get.mRNA.acc}} - searches through filtered gene annotations for 
-#' predicted mRNA accessions identifiers (i.e., "XM_"), and
+#' predicted mRNA accessions identifiers (i.e., "XM_"),
 #' \code{\link{get.mRNA.translated}} - returns the protein translated 
-#' sequences for the mRNA in FASTA format.
+#' sequences for the mRNA in FASTA format, and \code{\link{upload.fasta.to.goanna}} -
+#' uploads protein FASTA files to GOanna.
 #' 
 #' The gene ontology list functions are \strong{not} coded as package
 #' functions, rather they are simple commands such as the following example,
