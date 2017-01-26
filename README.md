@@ -215,7 +215,7 @@
     target region might overlap exons in the gff3 file.")
 
 
-###### 11. Remove overlapping intervals
+###### 11. Merge overlapping intervals
 
     final.target.region <- reduce(target.region)
 
