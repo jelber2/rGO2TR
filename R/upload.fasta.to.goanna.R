@@ -7,7 +7,7 @@
 #' @param max.target.sequences Maximum number of target sequences for BLAST search
 #' @param percent.identity Percent Identity of the BLAST search as a string
 #' @param query.coverage Query coverage of BLAST search as a string
-#'
+#' @return A status of the GOanna webpage request
 #' @examples
 #' upload.fasta.to.goanna(email.address ="email",
 #'                        file.to.upload = "sparrow.mRNA1.fasta",
@@ -16,6 +16,7 @@
 #'                        max.target.sequences = "3",
 #'                        percent.identity = "20",
 #'                        query.coverage = "20")
+
 upload.fasta.to.goanna <- function(email.address,
                                    file.to.upload,
                                    expected.value,
