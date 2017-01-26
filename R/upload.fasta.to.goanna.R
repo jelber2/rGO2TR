@@ -7,9 +7,9 @@
 #' @param max.target.sequences Maximum number of target sequences for BLAST search
 #' @param percent.identity Percent Identity of the BLAST search as a string
 #' @param query.coverage Query coverage of BLAST search as a string
-#' @return A status of the GOanna webpage request
+#' @return results = a status of the GOanna webpage request
 #' @examples
-#' upload.fasta.to.goanna(email.address ="email",
+#' result <- upload.fasta.to.goanna(email.address ="email",
 #'                        file.to.upload = "sparrow.mRNA1.fasta",
 #'                        expected.value = "10e-20",
 #'                        word.size = "3",
@@ -38,5 +38,6 @@ upload.fasta.to.goanna <- function(email.address,
                             pgform$fields$PCTID$value <- percent.identity,
                             pgform$fields$QRYCOV$value <- query.coverage,
                             pgform$fields$blastp_query_cov$value <- query.coverage)
-  rvest::submit_form(pgsession,filled_form)
+  result <- rvest::submit_form(pgsession,filled_form)
+  return(result)
 }
