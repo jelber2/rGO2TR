@@ -26,17 +26,17 @@ upload.fasta.to.goanna <- function(email.address,
                                    query.coverage) {
 
   url       <-"http://agbase.msstate.edu/cgi-bin/tools/GOanna.cgi"   ## page to spider
-  pgsession <-html_session(url)               ## create session
-  pgform    <-html_form(pgsession)[[1]]       ## pull form from session
-  filled_form <- set_values(pgform,
+  pgsession <-rvest::html_session(url)               ## create session
+  pgform    <-rvest::html_form(pgsession)[[1]]       ## pull form from session
+  filled_form <- rvest::set_values(pgform,
                             pgform$url <- "",
                             pgform$fields$EMAIL$value <- email.address,
-                            pgform$fields$IDLIST$value <- upload_file(file.to.upload),
+                            pgform$fields$IDLIST$value <- httr::upload_file(file.to.upload),
                             pgform$fields$EXPECT$value <- expected.value,
                             pgform$fields$WORD_SIZE$value <- word.size,
                             pgform$fields$MAX_TARGET_SEQS$value <- max.target.sequences,
                             pgform$fields$PCTID$value <- percent.identity,
                             pgform$fields$QRYCOV$value <- query.coverage,
                             pgform$fields$blastp_query_cov$value <- query.coverage)
-  submit_form(pgsession,filled_form)
+  rvest::submit_form(pgsession,filled_form)
 }
