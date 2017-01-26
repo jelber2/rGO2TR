@@ -23,13 +23,13 @@ upload.fasta.to.goanna(email.address, file.to.upload, expected.value, word.size,
 \item{query.coverage}{Query coverage of BLAST search as a string}
 }
 \value{
-A status of the GOanna webpage request
+results = a status of the GOanna webpage request
 }
 \description{
 Upload protein FASTA files to GOanna website.
 }
 \examples{
-upload.fasta.to.goanna(email.address ="email",
+result <- upload.fasta.to.goanna(email.address ="email",
                        file.to.upload = "sparrow.mRNA1.fasta",
                        expected.value = "10e-20",
                        word.size = "3",
