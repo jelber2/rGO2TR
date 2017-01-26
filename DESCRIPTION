@@ -5,12 +5,14 @@ Version: 1.0.9
 Date: 2017-1-25
 Authors@R: person("Jean", "Elbers", email = "jean.elbers@gmail.com", role = c("aut", "cre"))
 Description: An R implementation of GO2TR: a gene ontology-based workflow to
-    generate target regions for target enrichment experiments using genomes 
+    generate target regions for target enrichment experiments using genomes
     annotated by the NCBI Eukaryotic Genome Annotation Pipeline.
 License: GPL-2
-Imports: GenomicRanges (>= 1.26.1), 
+Imports:
+    GenomicRanges (>= 1.26.1),
     XML (>= 3.98-1.4),
     GOstats (>= 2.40.0),
     GO.db (>= 3.4.0),
     rvest (>= 0.3.2),
     httr (>= 1.2.1)
+RoxygenNote: 5.0.1

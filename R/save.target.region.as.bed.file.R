@@ -1,7 +1,7 @@
 #' Saves final.target.region as a bed file
 #' 
-#' @param final.target.region
-#' @param output.file.name
+#' @param final.target.region R object to save as BED file
+#' @param output.file.name Name of BED file
 #' @examples
 #' save.target.region.as.bed.file(final.target.region, "sparrow.pigmentome.bed")
 save.target.region.as.bed.file <- function (final.target.region,

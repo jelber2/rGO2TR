@@ -10,7 +10,7 @@
 #' @param ... Other key-value pairs passed to the efetch url string, e.g seq_stop
 #' @return Returns efetch query
 #' @examples
-#' efetch.out <- efetch2("input.R.object.split[[i]], "nucleotide", "gb", "xml")
+#' efetch.out <- efetch2(input.R.object.split[[i]], "nucleotide", "gb", "xml")
 efetch2 <- function (id, db = "pubmed", rettype = "", retmode = "text", 
           showURL = FALSE, destfile, ...) 
 {
