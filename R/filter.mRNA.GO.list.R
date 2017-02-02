@@ -5,6 +5,7 @@
 #' @return retained.mRNA.list filtered by \code{GO.id.list}
 #' @examples
 #' retained.mRNA.list <- filter.mRNA.GO.list(mRNA.GO.list, GO.id.list)
+#' @export
 filter.mRNA.GO.list <- function (mRNA.GO.list, GO.id.list) {
   retained.mRNA.list <- data.frame(cbind("V1" = "NA",
                                          "V2" = "NA"),

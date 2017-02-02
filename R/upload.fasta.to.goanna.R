@@ -16,7 +16,7 @@
 #'                        max.target.sequences = "3",
 #'                        percent.identity = "20",
 #'                        query.coverage = "20")
-
+#' @export
 upload.fasta.to.goanna <- function(email.address,
                                    file.to.upload,
                                    expected.value,

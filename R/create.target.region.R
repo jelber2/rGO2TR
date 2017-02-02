@@ -3,13 +3,14 @@
 #' @param retained.mRNA.list mRNA retained by \code{filter.mRNA.GO.list} function
 #' @param gff3.filtered Granges object to filter by \code{retained.mRNA.list}
 #' @return target.region in the form of a Granges object with overlapping intervals
-#' @examples 
+#' @examples
 #' target.region <- create.target.region(retained.mRNA.list, gff3.filtered)
+#' @export
 create.target.region <- function (retained.mRNA.list, gff3.filtered) {
-  df <- data.frame(seqnames = seqnames(gff3.filtered), 
-                   starts = start(gff3.filtered),
-                   ends = end(gff3.filtered), 
-                   strands = strand(gff3.filtered),
+  df <- data.frame(seqnames = GenomeInfoDb::seqnames(gff3.filtered), 
+                   starts = GenomicRanges::start(gff3.filtered),
+                   ends = GenomicRanges::end(gff3.filtered), 
+                   strands = GenomicRanges::strand(gff3.filtered),
                    tags = gff3.filtered$tags)
   
   df$seqnames <- as.character(df$seqnames)
@@ -28,7 +29,7 @@ create.target.region <- function (retained.mRNA.list, gff3.filtered) {
     cat("Finished filtering retained mRNA", j, "of", length(retained.mRNA.list), 
         "finished", "\n")
   }
-  target.region <- makeGRangesFromDataFrame(target.region,
+  target.region <- GenomicRanges::makeGRangesFromDataFrame(target.region,
                                             keep.extra.columns=TRUE,
                                             ignore.strand=FALSE,
                                             seqinfo=NULL,

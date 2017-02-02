@@ -4,6 +4,7 @@
 #' Genome Annotation Pipeline.
 #' @examples
 #' euks.filtered <- get.ncbi.annot.euk.genomes()
+#' @export
 get.ncbi.annot.euk.genomes <- function() {
   # parse the webpage
   theurl <- "https://www.ncbi.nlm.nih.gov/genome/annotation_euk/all/"

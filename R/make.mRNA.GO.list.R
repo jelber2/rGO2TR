@@ -6,6 +6,7 @@
 #' @examples
 #' mRNA.GO.list <- make.mRNA.GO.list("sparrow_annot.sliminput.txt",
 #'                                   "sparrow.mRNA.GO.list.txt")
+#' @export
 make.mRNA.GO.list <- function (path.to.GOanna.output.file, output.file.name) {
   # read in the data from GOanna as mRNA GO list
   mRNA.GO.list <- read.table(path.to.GOanna.output.file)

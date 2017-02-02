@@ -1,3 +1,4 @@
+#' @export
 ftpList<-function(ftp, fileonly = FALSE)
   # code from Chris Stubben's genomes2 package modified by Jean Elbers
   # https://github.com/cstubben/genomes2/blob/master/R/ftpList.R

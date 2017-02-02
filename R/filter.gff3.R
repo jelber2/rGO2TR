@@ -5,6 +5,7 @@
 #' @return Returns a filtered gff3 file
 #' @examples
 #' gff3.filtered <- filter.gff3(gff3, 'exon')
+#' @export
 filter.gff3 <- function(file.name, type.to.filter) {
   # filters gff3 annotation file by desired feature
   file.name.filtered <- file.name[file.name$feature == type.to.filter, ]

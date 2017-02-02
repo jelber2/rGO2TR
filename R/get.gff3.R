@@ -5,6 +5,7 @@
 #' @return A GRanges object of the gene annotations
 #' @examples
 #' gff3 <- get.gff3(query.results, "sparrow.genome.gff3.gz")
+#' @export
 get.gff3 <- function(query.results, output.file.name) {
   # appends "GFF/" to the ftp link for query result
   ftp.search.path <- paste(query.results$Links, "GFF/", sep = "")

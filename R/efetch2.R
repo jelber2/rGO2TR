@@ -11,6 +11,7 @@
 #' @return Returns efetch query
 #' @examples
 #' efetch.out <- efetch2(input.R.object.split[[i]], "nucleotide", "gb", "xml")
+#' @export
 efetch2 <- function (id, db = "pubmed", rettype = "", retmode = "text", 
           showURL = FALSE, destfile, ...) 
 {

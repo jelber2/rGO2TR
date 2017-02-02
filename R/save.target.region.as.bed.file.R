@@ -4,6 +4,7 @@
 #' @param output.file.name Name of BED file
 #' @examples
 #' save.target.region.as.bed.file(final.target.region, "sparrow.pigmentome.bed")
+#' @export
 save.target.region.as.bed.file <- function (final.target.region,
                                             output.file.name) {
   # creates the data.frame df to store seqnames,start,end,name,score,and strand

@@ -14,7 +14,7 @@
 #'                                       mRNA2.translated,
 #'                                      "jelber2@@lsu.edu",
 #'                                      "sparrow.mRNA2.fasta")
-
+#' @export
 get.mRNA.translated <- function(input.R.object,
                               output.R.object,
                               email.address,

@@ -5,6 +5,7 @@
 #' @examples
 #' query.results <- search.annot.euks("Zonotrichia albicollis")
 #' query.results <- search.annot.euks("Canis lupus")
+#' @export
 search.annot.euks <- function(query) {
   query.results <- euks.filtered[agrepl(query, euks.filtered$Species),]
   query.results$Links <- as.character(query.results$Links)
