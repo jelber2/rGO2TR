@@ -16,6 +16,10 @@ get.ncbi.annot.euk.genomes <- function() {
   # combines all tables into one table
   tables2 <- do.call(rbind, tables)
 
+  # get rid of rows without ftp
+  tables2$Links[tables2$Links==""] <- "NA"
+  tables2 <- tables2[!grepl("NA", tables2$Links),]
+
   # gets rid of columns 7-10 (they aren't needed)
   tables2[6:10] <- list(NULL)
   
