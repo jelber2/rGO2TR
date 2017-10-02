@@ -185,9 +185,9 @@
     goannaoutput2 <- read.table("sparrow_set2.sliminput.txt")
     # Note as of rGO2TR version 1.0.10 there is now a download.goanna.results()
       function which is called using:
-      goannaoutput1 <- download.goanna.results(results = results1,
+      goannaoutput1 <- download.goanna.results(result = results1,
                                                goanna.zip.file.name = "mRNA1.test.zip")
-      goannaoutput2 <- download.goanna.results(results = results2,
+      goannaoutput2 <- download.goanna.results(result = results2,
                                                goanna.zip.file.name = "mRNA2.test.zip")
 
     
