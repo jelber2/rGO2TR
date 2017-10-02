@@ -2,7 +2,7 @@
 
 ## FOR MAKER ANNOTATED GENOMES FOLLOW THESE INSTRUCTIONS
 
-### 1. Read in MAKER produce gff3 file
+### 1. Read in MAKER produce gff3 file (can be gzipped)
 
     gff3 <-read.maker.gff3("camel.gff3")
 
