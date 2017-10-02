@@ -13,6 +13,6 @@ download.goanna.results <- function (result,
   result3 <- as.character(result2)
   result4 <- sub(".+Your GOanna job has been submitted with job_id: (\\w+).+", "\\1", result3)
   utils::download.file(paste0("http://www.agbase.msstate.edu/tmp/GOAL/", result4, ".zip"), destfile = goanna.zip.file.name)
-  goannaoutput <- read.table(unz("mRNA.test.zip", paste0(result4,".sliminput.txt")))
+  goannaoutput <- read.table(unz(goanna.zip.file.name, paste0(result4,".sliminput.txt")))
   return(goannaoutput)
 }
