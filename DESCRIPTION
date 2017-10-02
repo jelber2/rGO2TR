@@ -18,6 +18,6 @@ Imports:
     GOstats (>= 2.40.0),
     GO.db (>= 3.4.0),
     rvest (>= 0.3.2),
-    httr (>= 1.2.1)
-	seqinr (>=3.4-5)
+    httr (>= 1.2.1),
+	seqinr (>= 3.4-5)
 RoxygenNote: 5.0.1
