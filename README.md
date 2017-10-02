@@ -62,7 +62,7 @@
 
 ##### Now you are ready to use the package to filter genomes by gene ontology!
 
-### [FOR MAKER ANNOTATED GENOMES FOLLOW THESE INSTRUCTIONS] (https://github.com/jelber2/rGO2TR/blob/master/README-MAKER.md)
+### [FOR MAKER ANNOTATED GENOMES FOLLOW THESE INSTRUCTIONS](https://github.com/jelber2/rGO2TR/blob/master/README-MAKER.md)
 
 ### FOR NCBI ANNOTATED GENOMES FOLLOW THE INSTRUCTIONS BELOW
 ###### 1. Get available genomes with the get.ncbi.annot.euk.genomes function

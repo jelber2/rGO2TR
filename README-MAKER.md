@@ -40,4 +40,4 @@
                                                   "maker3_proteins_0-0.74_AED.fasta",
                                                   "mRNA2.translated.fasta")
 
-### 6. [Follow step 6 and onwards on the main README.MD page] (https://github.com/jelber2/rGO2TR/blob/master/README.md)
+### 6. [Follow step 6 and onwards on the main README.MD page](https://github.com/jelber2/rGO2TR/blob/master/README.md)
