@@ -2,6 +2,8 @@
 
 ## FOR MAKER ANNOTATED GENOMES FOLLOW THESE INSTRUCTIONS
 
+## NOTE ASSUMES THAT YOUR MAKER IDs are in the form Cadr_111111-RA (regular expression= \w+_\d+-R\w)
+
 ### 1. Read in MAKER produce gff3 file (can be gzipped)
 
     gff3 <-read.maker.gff3("camel.gff3")
