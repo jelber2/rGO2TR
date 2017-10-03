@@ -77,7 +77,7 @@
                 col.names = FALSE)
 
 
-###### 7. Make GO id list for desired gene ontology term
+### 7. Make GO id list for desired gene ontology term
 
     # example using GO term for immune response = GO:0006955
     GO.term <- "GO:0006955" # sets GO term as immune response
@@ -85,23 +85,23 @@
     GO.id.list <- c(GO.term, GO.term.descendants) # makes GO id list
 
 
-###### 8. Make mRNA-GO id list with make.mRNA.GO.list function
+### 8. Make mRNA-GO id list with make.mRNA.GO.list function
 
     mRNA.GO.list <- make.mRNA.GO.list("camel_annot.sliminput.txt",
                                       "camel.mRNA.GO.list.txt")
 
 
-###### 9. Filter the mRNA-GO id list with filter.mRNA.GO.list function
+### 9. Filter the mRNA-GO id list with filter.mRNA.GO.list function
 
     retained.mRNA.list <- filter.mRNA.GO.list(mRNA.GO.list, GO.id.list)
 
 
-###### 10a. Create an initial target region with create.target.region function
+### 10a. Create an initial target region with create.target.region function
 
     target.region <- create.maker.target.region(retained.mRNA.list, gff3.filtered)
 
 
-###### 10b. Estimate number of genes and exons
+### 10b. Estimate number of genes and exons
 
     # how many unique genes are there?
     cat("There are at least",
@@ -120,7 +120,7 @@
     target region might overlap exons in the gff3 file.")
 
 
-###### 11. Merge overlapping intervals
+### 11. Merge overlapping intervals
 
     final.target.region <- reduce(target.region)
 
@@ -132,6 +132,6 @@
     "bp.")
 
 
-###### 13. Convert final target region to a BED file
+### 13. Convert final target region to a BED file
 
     save.target.region.as.bed.file(final.target.region, "camel.immunome.bed")
