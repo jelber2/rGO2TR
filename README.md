@@ -29,6 +29,7 @@
     install.packages("XML")
     install.packages("httr")
 	install.packages("seqinr")
+	install.packages("RCurl")
 
 
 ##### To install Bioconductor packages:
@@ -51,6 +52,7 @@
 ##### From within R, load the required libraries
 
     library("httr")
+	library("RCurl")
 	library("seqinr")
     library("rvest")
     library("GOstats")
