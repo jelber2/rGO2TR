@@ -40,4 +40,98 @@
                                                   "maker3_proteins_0-0.74_AED.fasta",
                                                   "mRNA2.translated.fasta")
 
-### 6. [Follow step 6 and onwards on the main README.MD page](https://github.com/jelber2/rGO2TR/blob/master/README.md)
+### 6a. Assign gene ontology using [GOanna](http://www.agbase.msstate.edu/cgi-bin/tools/GOanna.cgi)
+
+    results1 <- upload.fasta.to.goanna(email.address ="email",
+                                       file.to.upload = "mRNA1.translated.fasta",
+                                       expected.value = "10e-20",
+                                       word.size = "3",
+                                       max.target.sequences = "3",
+                                       percent.identity = "20",
+                                       query.coverage = "20")
+
+    results2 <- upload.fasta.to.goanna(email.address ="email",
+                                       file.to.upload = "mRNA2.translated.fasta",
+                                       expected.value = "10e-20",
+                                       word.size = "3",
+                                       max.target.sequences = "3",
+                                       percent.identity = "20",
+                                       query.coverage = "20")
+
+
+### 6b. Read in the sliminput.txt files into R using the following commands:
+
+      goannaoutput1 <- download.goanna.results(result = results1,
+                                               goanna.zip.file.name = "mRNA1.goanna.zip")
+      goannaoutput2 <- download.goanna.results(result = results2,
+                                               goanna.zip.file.name = "mRNA2.goanna.zip")
+
+    goannaoutput <- rbind(goannaoutput1, goannaoutput2)
+    write.table(goannaoutput,
+                file = "camel_annot.sliminput.txt",
+                append = FALSE,
+                quote = FALSE,
+                sep = "\t",
+                eol = "\n",
+                row.names = FALSE,
+                col.names = FALSE)
+
+
+###### 7. Make GO id list for desired gene ontology term
+
+    # example using GO term for immune response = GO:0006955
+    GO.term <- "GO:0006955" # sets GO term as immune response
+    GO.term.descendants <- GOBPOFFSPRING$"GO:0006955" # gets descendants for immune response
+    GO.id.list <- c(GO.term, GO.term.descendants) # makes GO id list
+
+
+###### 8. Make mRNA-GO id list with make.mRNA.GO.list function
+
+    mRNA.GO.list <- make.mRNA.GO.list("camel_annot.sliminput.txt",
+                                      "camel.mRNA.GO.list.txt")
+
+
+###### 9. Filter the mRNA-GO id list with filter.mRNA.GO.list function
+
+    retained.mRNA.list <- filter.mRNA.GO.list(mRNA.GO.list, GO.id.list)
+
+
+###### 10a. Create an initial target region with create.target.region function
+
+    target.region <- create.maker.target.region(retained.mRNA.list, gff3.filtered)
+
+
+###### 10b. Estimate number of genes and exons
+
+    # how many unique genes are there?
+    cat("There are at least",
+    length(unique(sub("(\\w+_\\d+)\\-R\\w",
+                             "\\1",
+                             unlist(strsplit(target.region$tags, ",")),
+                             perl=T))),
+    "unique genes in the target region, but possibly more because genes in this 
+    target region might overlap genes in the gff3 file.")
+
+
+    # how many exons are there?
+    cat("There are at least",
+    length(target.region$tags),
+    "exons in the target region, but possibly more because exons in this 
+    target region might overlap exons in the gff3 file.")
+
+
+###### 11. Merge overlapping intervals
+
+    final.target.region <- reduce(target.region)
+
+
+###### 12. Estimate the size of the final non-overlapping target region
+
+    cat("The target region after removing overlaps is",
+    sum(width(final.target.region)),
+    "bp.")
+
+
+###### 13. Convert final target region to a BED file
+
+    save.target.region.as.bed.file(final.target.region, "camel.immunome.bed")
