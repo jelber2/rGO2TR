@@ -125,7 +125,7 @@
     final.target.region <- reduce(target.region)
 
 
-###### 12. Estimate the size of the final non-overlapping target region
+### 12. Estimate the size of the final non-overlapping target region
 
     cat("The target region after removing overlaps is",
     sum(width(final.target.region)),
