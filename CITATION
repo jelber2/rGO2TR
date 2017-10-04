@@ -1,11 +1,14 @@
-@article{
-   author = {Elbers, Jean P. and Taylor, Sabrina S.},
-   title = {GO2TR: a gene ontology-based workflow to generate target regions for target enrichment experiments},
-   journal = {Conservation Genetics Resources},
-   volume = {7},
-   number = {4},
-   pages = {851-857},
-   DOI = {10.1007/s12686-015-0487-6},
-   year = {2015},
-   type = {Journal Article}
-}
+citHeader("To cite the rGO2TR package in publications use:")
+citEntry(entry = "Article", 
+    author = personList(as.person("Jean P. Elbers"),
+                        as.person("Sabrina S. Taylor")),
+    title = "GO2TR: a gene ontology-based workflow to generate target regions for target enrichment experiments", 
+    journal = "Conservation Genetics Resources",
+    year = 2015, 
+    volume = 7,
+    pages = "851--857", 
+    DOI = "10.1007/s12686-015-0487-6", 
+    textVersion = paste("Elbers, J. P. and Taylor, S. S. (2015)", 
+        "GO2TR: a gene ontology-based workflow to generate target regions for target enrichment experiments", 
+        "Conservation Genetics Resources 7:851--857"))
+citFooter("As rGO2TR is continually evolving, you may want to cite its version number. Find it with 'help(package=rGO2TR)'.")
