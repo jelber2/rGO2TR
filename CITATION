@@ -1,0 +1,11 @@
+@article{
+   author = {Elbers, Jean P. and Taylor, Sabrina S.},
+   title = {GO2TR: a gene ontology-based workflow to generate target regions for target enrichment experiments},
+   journal = {Conservation Genetics Resources},
+   volume = {7},
+   number = {4},
+   pages = {851-857},
+   DOI = {10.1007/s12686-015-0487-6},
+   year = {2015},
+   type = {Journal Article}
+}
