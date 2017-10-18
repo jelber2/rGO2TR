@@ -43,6 +43,7 @@
 
 ##### Then use the following command to actually install rGO2TR package
 
+    library("devtools")
     devtools::install_github("jelber2/rGO2TR")
 
 
