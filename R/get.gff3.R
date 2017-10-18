@@ -18,7 +18,16 @@ get.gff3 <- function(query.results, output.file.name) {
   ftp.search.list <- ftpList(ftp = ftp.search.path, fileonly = TRUE)
   ftp.search.num <- grep("_top_level.gff3.gz", ftp.search.list$name)
   ftp.desired.path <- ftp.search.list$name[ftp.search.num]
-  
+
+  # if there is more than 1 assembly, let the user choose the desired assembly
+  if (length(ftp.desired.path) > 1)
+     cat('\nThere is more than 1 assembly. Which one do you want?\n')
+     for (i in 1:length(ftp.desired.path)) cat('\n',ftp.desired.path[i])
+     cat('\n')
+     cat('\n')
+     file.number <- as.integer(readline(prompt='Enter the reference number (ex: 1 for the first, 2 for the second, etc): '))
+     ftp.desired.path <- ftp.desired.path[file.number]
+
   # creates the path to download the GFF3 file from queried species
   gff3.url <- paste(ftp.search.path, ftp.desired.path, sep = "")
   
