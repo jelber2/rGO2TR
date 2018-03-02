@@ -62,6 +62,27 @@
     library("GO.db")
     library("rGO2TR")
 
+### Citation
+#### To cite the rGO2TR package in publications use:
+
+    Elbers, J. P. and Taylor, S. S. (2015) GO2TR: a gene ontology-based workflow to generate target regions for target enrichment
+    experiments Conservation Genetics Resources 7:851--857
+
+#### A BibTeX entry for LaTeX users is
+
+    @Article{,
+    author = {Jean P. Elbers and Sabrina S. Taylor},
+    title = {GO2TR: a gene ontology-based workflow to generate target regions for target enrichment experiments},
+    journal = {Conservation Genetics Resources},
+    year = {2015},
+    volume = {7},
+    pages = {851--857},
+    doi = {10.1007/s12686-015-0487-6},
+    }
+
+#### As rGO2TR is continually evolving, you may want to cite its version number. Find it with
+    help(package=rGO2TR) or
+    sessionInfo()
 
 ##### Now you are ready to use the package to filter genomes by gene ontology!
 
