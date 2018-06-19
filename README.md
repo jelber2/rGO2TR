@@ -128,12 +128,12 @@
 
     mRNA1.translated <- get.mRNA.translated(mRNA1.acc,
                                             mRNA1.translated,
-                                            "jelber2@lsu.edu",
+                                            "jelber2@lsu.edu", # put your email address here
                                             "sparrow.mRNA1.fasta")
 
     mRNA2.translated <- get.mRNA.translated(mRNA2.acc,
                                             mRNA2.translated,
-                                            "jelber2@lsu.edu",
+                                            "jelber2@lsu.edu", # put your email address here
                                             "sparrow.mRNA2.fasta")
 
 
