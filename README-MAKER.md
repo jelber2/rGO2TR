@@ -34,7 +34,7 @@
 
     mRNA1.translated <- get.maker.mRNA.translated(mRNA1.acc,
                                               mRNA1.translated,
-                                              "maker3_proteins_0-0.74_AED.fasta",
+                                              "maker3_proteins_0-0.74_AED.fasta", # this is a protein FASTA file outputted from MAKER
                                               "mRNA1.translated.fasta")
 
     mRNA2.translated <- get.maker.mRNA.translated(mRNA2.acc,
