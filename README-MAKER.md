@@ -42,7 +42,8 @@
                                                   "maker3_proteins_0-0.74_AED.fasta",
                                                   "mRNA2.translated.fasta")
 
-### 6a. Assign gene ontology using [GOanna](http://www.agbase.msstate.edu/cgi-bin/tools/GOanna.cgi)
+###### 6a. Assign gene ontology using [GOanna](http://www.agbase.arizona.edu/cgi-bin/tools/GOanna.cgi) In January 2019 AgBase will be switching to a non-profit, subscription model.
+    Note1: the upload.fasta.to.goanna() function seems to be broken, so manual file uploading is necessary, see README.md
 
     results1 <- upload.fasta.to.goanna(email.address ="email",
                                        file.to.upload = "mRNA1.translated.fasta",
