@@ -16,4 +16,3 @@ Parse genomes annotated by NCBI Eukaryotic Genome Annotation Pipeline.
 \examples{
 euks.filtered <- get.ncbi.annot.euk.genomes()
 }
-

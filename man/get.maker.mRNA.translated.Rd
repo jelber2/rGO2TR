@@ -32,4 +32,3 @@ mRNA2.translated <- get.maker.mRNA.translated(mRNA2.acc,
                                               "maker.translated.fasta",
                                               "sparrow.mRNA2.translated.fasta")
 }
-

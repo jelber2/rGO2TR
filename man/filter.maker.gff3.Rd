@@ -20,4 +20,3 @@ Filters a GRange object created from MAKER by desired annotation source.
 \examples{
 gff3.filtered <- filter.maker.gff3(gff3, 'exon')
 }
-

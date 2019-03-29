@@ -18,4 +18,3 @@ Reads a MAKER create gff3 file into R.
 \examples{
 gff3 <- read.maker.gff3(gff3.file)
 }
-

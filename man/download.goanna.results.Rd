@@ -21,4 +21,3 @@ Download results from GOanna website.
 goannaoutput<- download.goanna.results(results = results,
                                        goanna.zip.file.name = "mRNA.test.zip")
 }
-

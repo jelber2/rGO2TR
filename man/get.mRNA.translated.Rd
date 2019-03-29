@@ -32,4 +32,3 @@ mRNA2.translated <- get.mRNA.translated(mRNA2.acc,
                                      "jelber2@lsu.edu",
                                      "sparrow.mRNA2.fasta")
 }
-

@@ -20,4 +20,3 @@ Filters a GRange object by desired annotation source.
 \examples{
 gff3.filtered <- filter.gff3(gff3, 'exon')
 }
-

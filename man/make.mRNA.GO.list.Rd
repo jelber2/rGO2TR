@@ -21,4 +21,3 @@ Makes mRNA-GO.list
 mRNA.GO.list <- make.mRNA.GO.list("sparrow_annot.sliminput.txt",
                                   "sparrow.mRNA.GO.list.txt")
 }
-

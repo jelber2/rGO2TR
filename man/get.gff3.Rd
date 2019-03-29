@@ -20,4 +20,3 @@ Downloads the desired gff3 gene annotation file.
 \examples{
 gff3 <- get.gff3(query.results, "sparrow.genome.gff3.gz")
 }
-

@@ -19,4 +19,3 @@ Searches Genomes Annotated by NCBI Eukaryotic Genome Annotation Pipeline.
 query.results <- search.annot.euks("Zonotrichia albicollis")
 query.results <- search.annot.euks("Canis lupus")
 }
-

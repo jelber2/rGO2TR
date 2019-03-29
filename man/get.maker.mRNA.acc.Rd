@@ -18,4 +18,3 @@ Gets mRNA accession identifiers from MAKER derived Granges object.
 \examples{
 mRNA.acc <- get.maker.mRNA.acc(gff3.filtered)
 }
-

@@ -20,4 +20,3 @@ Filters mRNA-GO list by GO id list to create Retained mRNA list
 \examples{
 retained.mRNA.list <- filter.mRNA.GO.list(mRNA.GO.list, GO.id.list)
 }
-

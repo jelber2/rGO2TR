@@ -18,4 +18,3 @@ Gets mRNA accession identifiers from desired Granges object.
 \examples{
 mRNA.acc <- get.mRNA.acc(gff3.filtered)
 }
-

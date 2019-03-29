@@ -19,6 +19,7 @@
     GO.db (from Bioconductor)
     rvest (from CRAN)
     seqinr (from CRAN)
+    tidyr (from CRAN)
 
 
 
@@ -28,8 +29,9 @@
     install.packages("rvest")
     install.packages("XML")
     install.packages("httr")
-	install.packages("seqinr")
-	install.packages("RCurl")
+  	install.packages("seqinr")
+  	install.packages("RCurl")
+  	install.packages("tidyr")
 
 
 ##### To install Bioconductor packages:
@@ -60,6 +62,7 @@
     library("GenomicRanges")
     library("XML")
     library("GO.db")
+    library("tidyr")
     library("rGO2TR")
 
 ### Citation
@@ -85,6 +88,8 @@
     sessionInfo()
 
 ##### Now you are ready to use the package to filter genomes by gene ontology!
+
+### [If you don't have a license for GOanna because AgBase is now pay-to-use, follow these instructions](https://github.com/jelber2/rGO2TR/blob/master/README-UNIPROT.md)
 
 ### [FOR MAKER ANNOTATED GENOMES FOLLOW THESE INSTRUCTIONS](https://github.com/jelber2/rGO2TR/blob/master/README-MAKER.md)
 

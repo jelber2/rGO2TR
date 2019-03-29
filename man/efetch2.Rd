@@ -35,4 +35,3 @@ https://github.com/cstubben/genomes2/blob/master/R/efetch.R
 \examples{
 efetch.out <- efetch2(input.R.object.split[[i]], "nucleotide", "gb", "xml")
 }
-

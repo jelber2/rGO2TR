@@ -17,4 +17,3 @@ Saves final.target.region as a bed file
 \examples{
 save.target.region.as.bed.file(final.target.region, "sparrow.pigmentome.bed")
 }
-

@@ -4,8 +4,8 @@
 \alias{upload.fasta.to.goanna}
 \title{Upload protein FASTA files to GOanna website.}
 \usage{
-upload.fasta.to.goanna(email.address, file.to.upload, expected.value, word.size,
-  max.target.sequences, percent.identity, query.coverage)
+upload.fasta.to.goanna(email.address, file.to.upload, expected.value,
+  word.size, max.target.sequences, percent.identity, query.coverage)
 }
 \arguments{
 \item{email.address}{Email address to send the output of GOanna as a string}
@@ -37,4 +37,3 @@ result <- upload.fasta.to.goanna(email.address ="email",
                        percent.identity = "20",
                        query.coverage = "20")
 }
-

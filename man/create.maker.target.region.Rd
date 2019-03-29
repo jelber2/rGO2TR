@@ -20,4 +20,3 @@ Filters Granges object by retained mRNA list to create MAKER target region
 \examples{
 target.region <- create.maker.target.region(retained.mRNA.list, gff3.filtered)
 }
-
