@@ -29,7 +29,7 @@ get.ncbi.annot.euk.genomes <- function() {
   
   # gets rid of ftp link at end of page
   web.links <- web.links[web.links != "ftp://ftp.ncbi.nlm.nih.gov/"]
-  ftp.links <- data.frame("Links" = (web.links[grepl("ftp://ftp.ncbi.",
+  ftp.links <- data.frame("Links" = (web.links[grepl("https://ftp.ncbi.nlm.nih.gov/genomes/all/annotation_releases/",
                                                      web.links)]))
   
   # adds ftp links to tables, renames tables3 to euks.filtered, converts ftp
