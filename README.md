@@ -93,19 +93,22 @@
 
 ### [FOR MAKER ANNOTATED GENOMES FOLLOW THESE INSTRUCTIONS](https://github.com/jelber2/rGO2TR/blob/master/README-MAKER.md)
 
-### FOR NCBI ANNOTATED GENOMES FOLLOW THE INSTRUCTIONS BELOW
+### FOR NCBI ANNOTATED GENOMES FOLLOW THE INSTRUCTIONS BELOW [See update from 9 May 2022](https://github.com/jelber2/rGO2TR/blob/master/Update.md)
 ###### 1. Get available genomes with the get.ncbi.annot.euk.genomes function
  This function is broken for the time being as NCBI changed its FTP for annotations.
+
     euks.filtered <- get.ncbi.annot.euk.genomes()
 
 
 ###### 2. Search for your desired genome with search.annot.euks function
   This function is broken for the time being as NCBI changed its FTP for annotations.
+
     query.results <- search.annot.euks("Zonotrichia albicollis")
 
 
 ###### 3a. Download desired gff3 gene annotation file with get.gff3 function
   This function is broken for the time being as NCBI changed its FTP for annotations.
+
     gff3 <- get.gff3(query.results, "sparrow.genome.gff3.gz")
 
 ###### 3b. Filter gene annotations by desired source (i.e., CDS, mRNA, exon, etc.)
