@@ -1,5 +1,6 @@
-RGO2TR update for NCBI ANNOTATED genomes using UniProt/Swiss-Prot
+RGO2TR update for NCBI structurally ANNOTATED genomes using UniProt/Swiss-Prot for functional annotation
 
+Example with cheetah immune on a Linux System
 ```bash
 mkdir -p ~/cheetah
 
