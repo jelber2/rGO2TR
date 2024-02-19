@@ -152,7 +152,7 @@ library("rGO2TR")
 
 
 # read in gff3
-gff3 <-read.maker.gff3("./GCF_003709585.1_Aci_jub_2_genomic.gff")
+gff3 <-read.maker.gff3("genomic.gff")
 
 # filter gff3
 gff3.filtered <- filter.gff3(gff3, 'exon')
