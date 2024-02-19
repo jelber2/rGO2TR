@@ -45,9 +45,9 @@ get.mRNA.translated <- function(input.R.object,
                            output.R.object,
                            perl=TRUE)
 
-    # Pause the system for 0.25 seconds, so there aren't too many efetch calls
+    # Pause the system for 0.50 seconds, so there aren't too many efetch calls
     # at any one time
-    Sys.sleep(0.25)
+    Sys.sleep(0.50)
     # This takes a while, so let the user know the progress
     cat("List", i, "of", length(names(input.R.object.split)), "finished", "\n")
   }
