@@ -197,7 +197,7 @@ system("paste UniProtKB-protein-ids.txt UniProtKB-entry-ids.txt  > UniProtKB-pro
 #H. Use the following code to fetch the go-ids for each entry-id
 
 system('rm -f UniProtKB-entry-ids-unique-go-ids.txt')
-system('while read i;do curl -s -H "Accept: text/plain; format=flatfile" "https://rest.uniprot.org/uniprotkb/${i}"|grep -P "GO:"|cut -f 5 -d " "|tr '\n' ' ' |tr ';' ','|perl -pe "s/, $//g"|perl -pe "s/^/${i}\t/g" >> UniProtKB-entry-ids-unique-go-ids.txt ;done < UniProtKB-entry-ids-unique.txt')
+system('while read i;do curl -s -H "Accept: text/plain; format=flatfile" "https://rest.uniprot.org/uniprotkb/${i}"|grep -P "GO:"|cut -f 5 -d " "|tr '\n' ' ' |tr ';' ','|perl -pe "s/, $/\n/g"|perl -pe "s/^/${i}\t/g" >> UniProtKB-entry-ids-unique-go-ids.txt ;done < UniProtKB-entry-ids-unique.txt')
 
 
 
