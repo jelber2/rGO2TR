@@ -213,7 +213,7 @@ uniprot.output$V2 <- gsub(" ", "", uniprot.output$V2)
 #E. Use tidyr separate rows to  convert A1  GO:1,GO:2 to
 #                                     A1  GO:1
 #                                     A1  GO:2
-uniprot.output <- tidyr::separate_rows(data = uniprot.output,V2,sep = ";")
+uniprot.output <- tidyr::separate_rows(data = uniprot.output,V2,sep = ",")
 
 #F. Get rid of uniprot proteins without any GO ids
 uniprot.output <- na.omit(uniprot.output)
