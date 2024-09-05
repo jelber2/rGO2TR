@@ -1,4 +1,4 @@
-![logo](https://github.com/jelber2/rGO2TR/blob/main/GO2TR.jpeg)
+![logo](https://github.com/jelber2/rGO2TR/blob/master/GO2TR.jpeg)
 # rGO2TR
 
 ### About
